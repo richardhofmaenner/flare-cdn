@@ -15,6 +15,6 @@ class RegisterController extends Controller
     {
       $validated = $request->validated();
 
-      // return var_dump($validated);
+      return var_dump($validated);
     }
 }

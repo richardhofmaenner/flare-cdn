@@ -23,7 +23,9 @@
         <x-forms.input placeholder="Email confirmation *" name="email_confirmation" type="email" value="{{ old('email_confirmation') }}" required />
         <x-forms.input placeholder="Password *" type="password" name="password" required />
         <x-forms.input placeholder="Password confirmation *" type="password" name="password_confirmation" required />
-        <x-forms.submit>Register</x-forms.submit>
+        <div>
+          <x-forms.submit>Register</x-forms.submit>
+        </div>
         <a href="{{ route('login') }}" class="block">Already an Account?</a>
       </div>
     </form>
