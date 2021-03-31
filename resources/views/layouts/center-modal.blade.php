@@ -13,8 +13,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-
+<body class="bg-gray-800">
+<main class="min-h-screen flex flex-col justify-center items-center text-white">
+  @yield('content')
+</main>
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
