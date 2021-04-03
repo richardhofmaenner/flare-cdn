@@ -46,4 +46,6 @@ Route::middleware(['isLoggedIn', 'auth', 'verified'])->prefix('dashboard')->grou
   Route::get('/', function () {
     return 'Hello World';
   })->name('dashboard.index');
+
+  Route::get('logout', [AuthController::class, 'destroy'])->name('dashboard.logout');
 });

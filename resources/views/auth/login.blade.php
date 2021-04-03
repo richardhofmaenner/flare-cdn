@@ -7,6 +7,7 @@
 @section('content')
   <x-box>
     <img id="logo-login" src="{{ asset('img/logo-white.png') }}" alt="">
+    <x-alerts.success />
     @if ($errors->any())
       <x-alerts.error>
         <ul>
