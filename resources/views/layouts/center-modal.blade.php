@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  @production
-    <meta name="robots" content="index,follow">
-  @endproduction
-
-  <title>@yield('title') | flare.li</title>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  @include('includes.head')
 </head>
 <body class="bg-gray-800">
 <main class="min-h-screen flex flex-col justify-center items-center text-white">
   @yield('content')
 </main>
-<script src="{{ asset('js/app.js') }}"></script>
+@include('includes.footer')
 </body>
 </html>
