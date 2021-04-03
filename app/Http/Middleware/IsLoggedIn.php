@@ -26,7 +26,7 @@ class IsLoggedIn
   public function handle(Request $request, Closure $next)
   {
     if (!Auth::check()) {
-      return redirect()->route('login')->with(['error' => 'Please sign in.']);
+      return redirect()->route('auth.login')->with(['error' => 'Please sign in.']);
     }
     return $next($request);
   }

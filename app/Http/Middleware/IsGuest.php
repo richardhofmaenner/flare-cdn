@@ -25,7 +25,7 @@ class IsGuest
   public function handle(Request $request, Closure $next)
   {
     if (Auth::check()) {
-      return redirect()->route('dashboard');
+      return redirect()->route('dashboard.index');
     }
     return $next($request);
   }

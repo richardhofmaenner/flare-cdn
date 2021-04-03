@@ -16,7 +16,7 @@
         </ul>
       </x-alerts.error>
     @endif
-    <form action="{{ route('register') }}" method="post">
+    <form action="{{ route('auth.register') }}" method="post">
       @csrf
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 mt-5">
         <x-forms.input placeholder="First Name *" name="firstname" value="{{ old('firstname') }}" autofocus required />
@@ -28,7 +28,7 @@
         <div>
           <x-forms.submit>Register</x-forms.submit>
         </div>
-        <a href="{{ route('login') }}" class="block">Already an Account?</a>
+        <a href="{{ route('auth.login') }}" class="block">Already an Account?</a>
       </div>
     </form>
   </x-box-large>
