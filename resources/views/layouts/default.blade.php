@@ -4,6 +4,7 @@
   @include('includes.head')
 </head>
 <body class="bg-gray-800 text-white">
+@include('includes.nav')
 <main class="container mx-auto">
   @yield('content')
 </main>

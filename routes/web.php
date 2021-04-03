@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Dashboard\ContainerController;
 use App\Http\Controllers\Dashboard\HomeController as DashboardHomeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
@@ -45,6 +46,7 @@ Route::prefix('email')->group(function () {
 
 Route::middleware(['isLoggedIn', 'auth', 'verified'])->prefix('dashboard')->group(function (){
   Route::get('/', [DashboardHomeController::class, 'index'])->name('dashboard.index');
+  Route::get('containers', [ContainerController::class, 'index'])->name('dashboard.containers.list');
 
   Route::get('logout', [AuthController::class, 'destroy'])->name('dashboard.logout');
 });

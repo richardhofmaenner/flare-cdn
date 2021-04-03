@@ -3,15 +3,17 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+class ContainerController extends Controller
 {
     public function index()
     {
       $user = Auth::user();
-      $userContainers =$user->containers;
-      return view('dashboard.home', ['userContainers' => $userContainers]);
+      $containers = $user->containers;
+
+      return view('dashboard.container.list', ['containers' => $containers]);
     }
 }
