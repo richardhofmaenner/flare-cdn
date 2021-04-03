@@ -7,15 +7,7 @@
 @section('content')
   <x-box-large>
     <img id="logo-login" src="{{ asset('img/logo-white.png') }}" alt="">
-    @if ($errors->any())
-      <x-alerts.error>
-        <ul>
-          @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-          @endforeach
-        </ul>
-      </x-alerts.error>
-    @endif
+    <x-alerts.error />
     <form action="{{ route('auth.register') }}" method="post">
       @csrf
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 mt-5">
